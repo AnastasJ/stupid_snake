@@ -73,11 +73,11 @@ window.onload = function()
 window.onkeydown = function move_snake ()
 {
 	var KEY_CODE = {
-		LEFT: 37;
-		UP: 38;
-		RIGHT: 39;
-		DOWN: 40;
-	}
+		LEFT: 37,
+		UP: 38,
+		RIGHT: 39,
+		DOWN: 40,
+	};
 	
 	//гасим текущую ячейку
 	setCell (current_row,current_col, false);
@@ -88,10 +88,9 @@ window.onkeydown = function move_snake ()
 				current_row --;
 		} else if (window.event.keyCode == KEY_CODE.RIGHT && current_col != number_row-1){
 				current_col++;
-		} else (window.event.keyCode == KEY_CODE.DOWN && current_row != number_row-1){
+		} else if (window.event.keyCode == KEY_CODE.DOWN && current_row != number_row-1){
 				current_row++;}
 			
-}
 	// яблочко
 	if (getCell (current_row, current_col))
 		alert ("Игра закончена");
