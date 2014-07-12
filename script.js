@@ -50,7 +50,8 @@ function setCell(row, col, val)
 	// если val == true, закрашивает €чейку,
 	// иначе убирает закраску.
 	var matrix = document.getElementById('matrix');
-	var div = matrix.children[row*number_row+col];
+	var cellNumber = number_col * (row - 1) + (col - 1);
+	var div = matrix.children[cellNumber];
 	if (val)
 		div.className = 'yellow';
 	else
